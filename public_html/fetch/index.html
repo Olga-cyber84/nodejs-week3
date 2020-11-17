@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function test() {
+        let inp = document.getElementById("inp");
+        let response = await fetch(inp.innerHTML);
+        console.log(response);
+        if (response.ok) { // если HTTP-статус в диапазоне 200-299
+        // получаем тело ответа (см. про этот метод ниже)
+          let text = await response.text();
+        } else {
+          alert("Ошибка HTTP: " + response.status);
+        }
+      }
+    </script>
+</head>
+<body>
+  <form>
+    <input type="text" id="inp">
+    <button id="bt" onClick="test()"></button>
+  </form>
+</body>
+</html>
