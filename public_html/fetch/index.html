@@ -12,6 +12,7 @@
         if (response.ok) { // если HTTP-статус в диапазоне 200-299
         // получаем тело ответа (см. про этот метод ниже)
           let text = await response.text();
+          inp.value = text;
         } else {
           alert("Ошибка HTTP: " + response.status);
         }
