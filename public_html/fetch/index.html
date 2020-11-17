@@ -7,7 +7,7 @@
     <script>
       async function test() {
         let inp = document.getElementById("inp");
-        let response = await fetch(inp.innerHTML);
+        let response = await fetch(inp.value);
         console.log(response);
         if (response.ok) { // если HTTP-статус в диапазоне 200-299
         // получаем тело ответа (см. про этот метод ниже)
