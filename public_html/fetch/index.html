@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-      function test() {
+      async function test() {
         let inp = document.getElementById("inp");
         let response = await fetch(inp.innerHTML);
         console.log(response);
@@ -21,7 +21,7 @@
 <body>
   <form>
     <input type="text" id="inp">
-    <button id="bt" onClick="test()"></button>
+    <button id="bt" onclick="test()">Send</button>
   </form>
 </body>
 </html>
