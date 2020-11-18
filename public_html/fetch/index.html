@@ -10,35 +10,15 @@
     <input type="text" id="inp">
     <button id="bt">Send</button>
     <script>
-//       async function test() {
-//         let inp = document.getElementById("inp");
-//         let response = await fetch(inp.value);
-//         console.log(response);
-//         let new_text = await response.text();
-//         inp.value = new_text;
-      
-      
         const input = document.querySelector('button')
             .addEventListener('click', test);
-        
-        function test(){
-            const url=document.querySelector('input').value;
-            console.log('Executed!'); 
-            fetch(url)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((data) => {
-                    console.log(data);
-                    document.querySelector('input').value = data;
-                })
-                .catch(reject => {
-                    console.log(reject);
-                });
-        }
-    
-      
-//       }
+      async function test() {
+        let inp = document.getElementById("inp");
+        let response = await fetch(inp.value);
+        console.log(response);
+        let new_text = await response.text();
+        inp.value = new_text;
+      }
     </script>
 </body>
 </html>
