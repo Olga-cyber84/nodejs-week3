@@ -8,7 +8,7 @@
 </head>
 <body>
     <input type="text" id="inp">
-    <button id="bt" onclick="test()">Send</button>
+    <button id="bt">Send</button>
     <script>
 //       async function test() {
 //         let inp = document.getElementById("inp");
@@ -18,8 +18,8 @@
 //         inp.value = new_text;
       
       
-//         const input = document.querySelector('button')
-//             .addEventListener('click', fetch_req);
+        const input = document.querySelector('button')
+            .addEventListener('click', test);
         
         function test(){
             const url=document.querySelector('input').value;
