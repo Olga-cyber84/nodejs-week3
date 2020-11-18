@@ -14,8 +14,30 @@
         let inp = document.getElementById("inp");
         let response = await fetch(inp.value);
         console.log(response);
-        let text = await response.text();
-        inp.value = text;
+        let new_text = await response.text();
+        inp.value = new_text;
+      
+      
+//         const input = document.querySelector('button')
+//             .addEventListener('click', fetch_req);
+        
+//         function fetch_req(){
+//             const url=document.querySelector('input').value;
+//             console.log('Executed!'); 
+//             fetch(url)
+//                 .then((response) => {
+//                     return response.text();
+//                 })
+//                 .then((data) => {
+//                     console.log(data);
+//                     document.querySelector('input').value = data;
+//                 })
+//                 .catch(reject => {
+//                     console.log(reject);
+//                 });
+//         }
+    
+      
       }
     </script>
 </body>
